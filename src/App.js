@@ -1,20 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import {useEffect, useState} from "react"
 import {BrowserRouter as Router, Routes , Route } from "react-router-dom"
+import {Link} from "react-router-dom"
 import Main from "./components/Main"
+import Drinks from "./components/Drinks"
 
 function App() {
-
-  return (
- <div className="App">
-  <Router>
+return (
+<div className="App">
+<Router>
+<Link to= "/drinks"> Drinks </Link>
 <Routes>
-  <Route path="/" element={<Main />}></Route>
+  <Route path="/" element={<Main />} />
+  <Route path="/drinks" element={<Drinks />} /> 
 </Routes>
 
-<Router>
-  </div>
+</Router>
+</div>
 
   )
 }

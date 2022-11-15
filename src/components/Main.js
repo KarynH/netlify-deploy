@@ -1,7 +1,7 @@
 
 import {useState, useEffect} from 'react'
 
-funciton Main() {
+function Main() {
 
 const [apis, setapis] = useState([])
 
@@ -13,10 +13,11 @@ useEffect(() => {
       }, [])
 
       return (
-        <div>
-      {apis.filter(api => api.Auth === "apiKey").map(api => {
+        <div className='App'>
+      {
+      apis.filter(api => api.Auth === "apiKey").map(api => {
         return (
-          <p>
+          <p key={api.Link}>
           <a href={api.Link}>{api.API}</a>
           </p>
         )
